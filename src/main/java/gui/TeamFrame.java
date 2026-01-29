@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,6 +42,8 @@ public class TeamFrame extends JFrame {
 
 	void addPlayer(Player player) {
 		add(new JLabel(" " + player.getName()));
-		add(new JLabel(player.getMediaString()));
+		JLabel score = new JLabel(player.getMediaString());
+		score.setForeground(Color.RED);
+		add(score);
 	}
 }
