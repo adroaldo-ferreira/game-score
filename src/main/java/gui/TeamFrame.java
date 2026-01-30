@@ -25,6 +25,9 @@ public class TeamFrame extends JFrame {
 
 		players.forEach(this::addPlayer);
 
+		add(new JLabel("Média"));
+		add(new JLabel(String.format("%.3f", Player.getAverageMedia())));
+
 		JButton btnSair = new JButton("SAIR");
 		btnSair.addActionListener(new ActionListener() {
 

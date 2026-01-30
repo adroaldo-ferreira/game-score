@@ -21,15 +21,11 @@ public class ShowWindow {
 			return;
 		}
 
-		// players.forEach(System.out::println);
-
 		new TeamFrame(players);
 
 	}
 
 	public static List<Player> getPlayerList(String filename) {
-		//System.out.println("Lendo arquivo");
-		//System.out.println(new File(filename).getAbsolutePath());
 
 		try (Scanner fileToScan = new Scanner(new File(filename))) {
 			List<Player> players = new ArrayList<Player>();

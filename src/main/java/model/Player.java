@@ -5,10 +5,14 @@ import java.text.DecimalFormat;
 public class Player {
 	private String name;
 	private double media;
+	private static int count = 0;
+	private static double sum = 0.0;
 
 	public Player(String name, double media) {
 		this.name = name;
 		this.media = media;
+		count++;
+		sum += media;
 	}
 
 	public String getName() {
@@ -38,5 +42,12 @@ public class Player {
 	@Override
 	public String toString() {
 		return String.format("%s: %.3f", name, media);
+	}
+
+	public static double getAverageMedia() {
+		if (count == 0) {
+			return 0.0;
+		}
+		return sum / count;
 	}
 }
