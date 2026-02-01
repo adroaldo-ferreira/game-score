@@ -25,7 +25,6 @@ public class LocacaoQuartos {
                     .forEach(q -> out.printf("%d\t%d\n", q, hospedes[q]));
         } catch (IOException e) {
             out.println("Erro ao ler o arquivo!");
-
         }
     }
 }
